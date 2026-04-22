@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
       time: '3 Semanas',
       tools: ['Ai', 'Ps', 'Id'],
       industry: 'Imobiliário',
-      mainImg: 'assets/social/realestate_social.png',
+      mainImg: '/assets/social/realestate_social.png',
     },
     mkv: {
       title: 'Performance Automotiva Digital',
@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
       time: '2 Semanas',
       tools: ['Ps', 'Ae', 'Pr'],
       industry: 'Automobilístico',
-      mainImg: 'assets/social/auto_social.png',
+      mainImg: '/assets/social/auto_social.png',
     },
     mystics: {
       title: 'Branding para Bem-Estar e Saúde',
@@ -205,7 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
       time: '4 Semanas',
       tools: ['Ai', 'Ps'],
       industry: 'Saúde',
-      mainImg: 'assets/social/health_social.png',
+      mainImg: '/assets/social/health_social.png',
     },
     matrics: {
       title: 'Inovação no Agronegócio Tech',
@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
       time: '6 Semanas',
       tools: ['Ai', 'Ps', 'Figma'],
       industry: 'Agronegócio',
-      mainImg: 'assets/social/agro_social.png',
+      mainImg: '/assets/social/agro_social.png',
     },
     artwing: {
       title: 'Campanhas de Alta Moda',
@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
       time: '3 Semanas',
       tools: ['Ps', 'Id', 'Lr'],
       industry: 'Moda',
-      mainImg: 'assets/social/fashion_social.png',
+      mainImg: '/assets/social/fashion_social.png',
     },
     nexon: {
       title: 'Ecossistema Visual de Tecnologia',
@@ -232,7 +232,7 @@ document.addEventListener('DOMContentLoaded', () => {
       time: 'Indeterminado',
       tools: ['Ai', 'Ps', 'Ae', 'Figma'],
       industry: 'Tecnologia',
-      mainImg: 'assets/social/tech_social.png',
+      mainImg: '/assets/social/tech_social.png',
     },
     chinagrill: {
       title: 'Social Media Campaign Designs',
@@ -241,7 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
       time: '1 Week',
       tools: ['Ai', 'Ps', 'Ae', 'Pr'],
       industry: 'Food & Beverage',
-      mainImg: './assets/img/hero_section_initial_1776660348874.png',
+      mainImg: '/assets/img/foto-capa-4k.png',
     },
   }
 
