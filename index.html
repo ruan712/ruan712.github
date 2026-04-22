@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wadson Silva | Portfólio 2026 | Diretor de Arte</title>
+  <meta name="description"
+    content="Portfólio 2026 de Wadson Silva — Diretor de Arte e Designer Gráfico Sênior com 6+ anos de experiência em branding, social media, audiovisual e identidade visual." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Bebas+Neue&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="cursor" id="cursor"></div>
+
+  <!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
+  <header class="site-header" id="site-header">
+    <div class="header-brand">Wadson Silva Portfólio <span class="header-sep">—</span> <span
+        class="header-year">2026</span></div>
+    <nav class="header-nav" id="main-nav">
+      <a href="#sobre" class="nav-link active" data-tab="sobre">Sobre Mim</a>
+      <a href="#branding" class="nav-link" data-tab="branding">Projetos</a>
+      <a href="#social" class="nav-link" data-tab="social">Social Media</a>
+      <a href="#impressao" class="nav-link" data-tab="impressao">Impressão</a>
+      <a href="#audiovisual" class="nav-link" data-tab="audiovisual">Audiovisual</a>
+      <a href="#contato" class="nav-link" data-tab="contato">Contato</a>
+    </nav>
+    <div class="header-dot" aria-hidden="true"></div>
+  </header>
+
+  <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+  <section class="hero" id="sobre" id="hero-section">
+
+    <!-- Tema Escaner/Radar de Fundo -->
+    <div class="radar-bg" id="radar-bg">
+      <div class="radar-circle rc-1"></div>
+      <div class="radar-circle rc-2"></div>
+      <div class="radar-circle rc-3"></div>
+      <div class="radar-line-x"></div>
+      <div class="radar-line-y"></div>
+      <div class="radar-sweep"></div>
+    </div>
+
+    <!-- Letreiro fantasma no fundo -->
+    <div class="hero-bg-text" id="hero-bg-text">PORTFÓLIO</div>
+
+    <div class="hero-content">
+
+      <!-- Card Interativo Esquerdo -->
+      <div class="hero-tag-wrapper tag-wrap-left" id="tag-left">
+        <div class="hero-tag interactive-card">
+          <div class="tag-main">
+            <span class="tag-label">COORD. DE MARKETING</span>
+          </div>
+          <div class="tag-details">
+            Transformo ideias abstratas em experiências visuais concretas. Foco em direção criativa, identidades
+            robustas e design estratégico de alta performance.
+          </div>
+        </div>
+      </div>
+
+      <!-- Foto com grid editorial e offset design -->
+      <div class="hero-photo-wrap" id="hero-photo-wrap">
+        <div class="photo-backdrop"></div>
+        <div class="photo-inner">
+          <img src="./assets/img/foto-capa-4k.png" alt="Wadson Silva — Diretor de Arte" class="hero-img" id="hero-portrait" />
+
+          <!-- Elementos desativados: a nova foto já possui elementos integrados -->
+          <!-- 
+          <div class="photo-decorative-text">WADSON SILVA — DATA: 20/04/2026</div>
+          <div class="photo-corners">
+            <div class="corner-marker top-left"></div>
+            <div class="corner-marker top-right"></div>
+            <div class="corner-marker bottom-left"></div>
+            <div class="corner-marker bottom-right"></div>
+          </div> 
+          -->
+
+          <!-- Efeito tecnológico -->
+          <div class="scanline" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <!-- Card Interativo Direito -->
+      <div class="hero-tag-wrapper tag-wrap-right" id="tag-right">
+        <div class="hero-tag interactive-card">
+          <div class="tag-main">
+            <span class="tag-label">6+ ANOS</span>
+          </div>
+          <div class="tag-details">
+            Mais de meia década colaborando em projetos globais. Ampla bagagem em agências de publicidade e construção
+            de narrativas multiculturais.
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Nome com parallax de mouse -->
+    <div class="hero-name-wrap" id="hero-name-wrap">
+
+      <h1 class="hero-name" id="hero-name" aria-label="Wadson Silva">
+        <span class="name-char" data-char="W">W</span><span class="name-char" data-char="A">A</span><span
+          class="name-char" data-char="D">D</span><span class="name-char" data-char="S">S</span><span class="name-char"
+          data-char="O">O</span><span class="name-char" data-char="N">N</span>
+      </h1>
+      <div class="hero-subtitle">Portfólio 2026</div>
+    </div>
+
+    <div class="scroll-hint" aria-label="Role para baixo">
+      <span class="scroll-text">Role para ver mais</span>
+      <div class="scroll-line"></div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════ SOBRE MIM ═══════════════════════════ -->
+  <section class="about-section" id="about-content" style="position:relative; overflow:hidden;">
+
+    <!-- Título da seção -->
+    <div class="section-header scroll-reveal" data-dir="up">
+      <div class="section-eyebrow">01 — Sobre Mim</div>
+      <h2 class="section-title">Conheça o<br /><em>Profissional</em></h2>
+      <div class="section-title-line"></div>
+    </div>
+
+    <!-- Bio + Foto grande (novo layout) -->
+    <div class="about-hero-row">
+
+      <!-- Coluna Esquerda: dois cards empilhados -->
+      <div class="about-left-col">
+
+        <!-- Card Sobre Mim -->
+        <div class="about-bio-block scroll-reveal" data-dir="left" data-delay="0">
+          <div class="card bio-card">
+            <div class="card-label">Sobre Mim</div>
+            <p class="bio-text">
+              Olá, sou Wadson Silva, <strong>Coordenador de Marketing e Estrategista de Campanhas</strong>. Sou
+              especialista em gestão de mídias sociais, design, planejamento publicitário e liderança de equipes.
+            </p>
+            <p class="bio-text" style="margin-top:16px;">
+              Ao longo da minha carreira, gerenciando operações de marketing em empresas como <strong>Zeepo
+                Motors</strong> e <strong>VIVAX</strong>, construí forte expertise na criação de narrativas visuais e no
+              desenvolvimento de estratégias de ponta a ponta. Atuo em ambientes dinâmicos e de ritmo acelerado, focado
+              em entregar soluções visuais e comerciais impactantes que se alinhem perfeitamente aos objetivos das
+              marcas.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card Mega Clientes (logos virão aqui) -->
+        <div class="about-mega-clients scroll-reveal" data-dir="left" data-delay="180">
+          <div class="card clients-logo-card">
+            <div class="card-label">Mega Clientes</div>
+            <div class="clients-logo-grid" id="clients-logo-grid">
+              <div class="client-brand br-1"></div>
+              <div class="client-brand br-2"></div>
+              <div class="client-brand br-3"></div>
+              <div class="client-brand br-4"></div>
+              <div class="client-brand br-5"></div>
+              <div class="client-brand br-6"></div>
+              <div class="client-brand br-7"></div>
+              <div class="client-brand br-8"></div>
+              <div class="client-brand br-9"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Coluna Direita: Foto Cutout Flutuante -->
+      <div class="about-photo-block scroll-reveal" data-dir="right" data-delay="100">
+        <div class="photo-cutout-wrap">
+          <div class="photo-cutout-glow"></div>
+          <img src="./assets/img/foto-perfil.png" alt="Wadson Silva — Diretor de Arte" class="about-photo-cutout"
+            id="about-portrait" />
+          <div class="photo-cutout-badge">DESIGN SÊNIOR<br /><span>EST. 2020</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ═══ JORNADA CRIATIVA / NÍVEL DE HABILIDADE ═══ -->
+    <div class="journey-section">
+
+      <!-- Esquerda: Jornada Criativa -->
+      <div class="journey-left scroll-reveal" data-dir="left" data-delay="0">
+        <div class="journey-card">
+          <div class="card-label">Jornada Profissional</div>
+          <div class="journey-timeline">
+            <!-- Item 1 -->
+            <div class="journey-item">
+              <div class="journey-dot"></div>
+              <div class="journey-info">
+                <span class="journey-role">Gestor / Estrategista</span>
+                <span class="journey-company">Agência Spartan</span>
+              </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="journey-item">
+              <div class="journey-dot"></div>
+              <div class="journey-info">
+                <span class="journey-role">Coordenador de Marketing</span>
+                <span class="journey-company">Zeepo Motors</span>
+              </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="journey-item">
+              <div class="journey-dot"></div>
+              <div class="journey-info">
+                <span class="journey-role">Coordenador de Marketing</span>
+                <span class="journey-company">VIVAX TV/VOLTRIA</span>
+              </div>
+            </div>
+            <!-- Item 4 -->
+            <div class="journey-item">
+              <div class="journey-dot"></div>
+              <div class="journey-info">
+                <span class="journey-role">Correspondente Bancário</span>
+                <span class="journey-company">Cred Simpli / Cred Fácil / We bank</span>
+              </div>
+            </div>
+            <!-- Item 5 -->
+            <div class="journey-item">
+              <div class="journey-dot"></div>
+              <div class="journey-info">
+                <span class="journey-role">Auxiliar Administrativo</span>
+                <span class="journey-company">Meu Vale Gestão Administrativa</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Centro: Foto Cutout -->
+      <div class="journey-center scroll-reveal" data-dir="up" data-delay="100">
+        <div class="journey-photo-wrap">
+          <div class="journey-photo-glow"></div>
+          <img src="./assets/img/foto-3.png" alt="Wadson Silva — Jornada Profissional" class="journey-photo" />
+        </div>
+      </div>
+
+      <!-- Direita: Nível de Habilidade + DNA Criativo -->
+      <div class="journey-right scroll-reveal" data-dir="right" data-delay="0">
+
+        <div class="skill-level-card">
+          <div class="card-label">Nível de Habilidade</div>
+          <ul class="skill-list">
+            <li class="scroll-reveal" data-dir="right" data-delay="80">Design para Redes Sociais</li>
+            <li class="scroll-reveal" data-dir="right" data-delay="130">Identidade de Marca &amp; Branding</li>
+            <li class="scroll-reveal" data-dir="right" data-delay="180">Audiovisual &amp; Edição de Vídeo</li>
+            <li class="scroll-reveal" data-dir="right" data-delay="230">Manipulação &amp; Retoque de Imagens</li>
+            <li class="scroll-reveal" data-dir="right" data-delay="280">Direção de Arte Criativa</li>
+            <li class="scroll-reveal" data-dir="right" data-delay="330">Design Assistido por IA</li>
+          </ul>
+        </div>
+
+        <div class="dna-mini-card scroll-reveal" data-dir="right" data-delay="200">
+          <div class="card-label">DNA Criativo</div>
+          <div class="dna-mini-stats">
+            <div class="dna-mini-stat">
+              <span class="stat-num" data-target="50" data-suffix="+">0+</span>
+              <span class="stat-label">Clientes</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="dna-mini-stat">
+              <span class="stat-num" data-target="6" data-suffix="+">0+</span>
+              <span class="stat-label">Anos</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Carreira -->
+    <div class="career-section" style="position:relative;">
+      <div class="career-header scroll-reveal" data-dir="up">
+        <div class="section-eyebrow">Trajetória</div>
+        <h3 class="career-title">Experiência Profissional</h3>
+      </div>
+      <div class="career-grid">
+        <!-- Item 1 -->
+        <div class="career-item scroll-reveal" data-dir="left" data-delay="0" data-modal="chinagrill">
+          <div class="career-dot"></div>
+          <div class="career-content">
+            <span class="career-role">Diretor de Arte</span>
+            <span class="career-company">China Grill</span>
+          </div>
+          <div class="career-expand-icon">↗</div>
+        </div>
+        <!-- Item 2 -->
+        <div class="career-item scroll-reveal" data-dir="up" data-delay="80" data-modal="mkv">
+          <div class="career-dot"></div>
+          <div class="career-content">
+            <span class="career-role">Designer Gráfico Sênior &amp; Editor de Vídeo</span>
+            <span class="career-company">MKV Digital — Dubai</span>
+          </div>
+          <div class="career-expand-icon">↗</div>
+        </div>
+        <!-- Item 3 -->
+        <div class="career-item scroll-reveal" data-dir="right" data-delay="160" data-modal="mystics">
+          <div class="career-dot"></div>
+          <div class="career-content">
+            <span class="career-role">Designer Gráfico Sênior</span>
+            <span class="career-company">Mystics Advertising</span>
+          </div>
+          <div class="career-expand-icon">↗</div>
+        </div>
+        <!-- Item 4 -->
+        <div class="career-item scroll-reveal" data-dir="left" data-delay="240" data-modal="matrics">
+          <div class="career-dot"></div>
+          <div class="career-content">
+            <span class="career-role">Gerente de Design</span>
+            <span class="career-company">Mátrics (Pvt) Ltd</span>
+          </div>
+          <div class="career-expand-icon">↗</div>
+        </div>
+        <!-- Item 5 -->
+        <div class="career-item scroll-reveal" data-dir="up" data-delay="320" data-modal="artwing">
+          <div class="career-dot"></div>
+          <div class="career-content">
+            <span class="career-role">Visualizador Sênior</span>
+            <span class="career-company">Artwing</span>
+          </div>
+          <div class="career-expand-icon">↗</div>
+        </div>
+        <!-- Item 6 -->
+        <div class="career-item scroll-reveal" data-dir="right" data-delay="400" data-modal="nexon">
+          <div class="career-dot"></div>
+          <div class="career-content">
+            <span class="career-role">Líder de Equipe — Design Gráfico &amp; Multimídia</span>
+            <span class="career-company">Nexon Corp</span>
+          </div>
+          <div class="career-expand-icon">↗</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DNA Criativo + Stats -->
+    <div class="dna-section" style="position:relative;">
+      <div class="dna-card scroll-reveal" data-dir="left" data-delay="0">
+        <div class="dna-label">DNA CRIATIVO</div>
+        <div class="dna-stats-row">
+          <div class="stat-block">
+            <span class="stat-num" data-target="40" data-suffix="+">0+</span>
+            <span class="stat-label">Projetos</span>
+          </div>
+        </div>
+        <ul class="dna-service-list">
+          <li class="scroll-reveal" data-dir="right" data-delay="100">Identidade de marca &amp; design de logo</li>
+          <li class="scroll-reveal" data-dir="right" data-delay="150">Branding para redes sociais &amp; materiais
+            criativos</li>
+          <li class="scroll-reveal" data-dir="right" data-delay="200">Marketing &amp; materiais promocionais</li>
+          <li class="scroll-reveal" data-dir="right" data-delay="250">Design digital &amp; impresso</li>
+          <li class="scroll-reveal" data-dir="right" data-delay="300">Diretrizes de marca &amp; sistemas visuais</li>
+          <li class="scroll-reveal" data-dir="right" data-delay="350">Design assistido por IA para geração de conceitos
+          </li>
+        </ul>
+      </div>
+
+      <div class="skills-card scroll-reveal" data-dir="right" data-delay="100">
+        <div class="dna-label">Especialidades</div>
+        <div class="skill-chips">
+          <span class="scroll-reveal" data-dir="up" data-delay="200">Marketing Design Criativo</span>
+          <span class="scroll-reveal" data-dir="up" data-delay="250">Manipulação &amp; Retoque de Imagens</span>
+          <span class="scroll-reveal" data-dir="up" data-delay="300">Audiovisual e Vídeos</span>
+          <span class="scroll-reveal" data-dir="up" data-delay="350">Uso de IA para Ideias Criativas</span>
+          <span class="scroll-reveal" data-dir="up" data-delay="400">Branding Corporativo</span>
+          <span class="scroll-reveal" data-dir="up" data-delay="450">Design de Interfaces</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mega Clientes -->
+    <div class="clients-section scroll-reveal" data-dir="up" style="position:relative;">
+      <div class="section-eyebrow" style="text-align:center; margin-bottom: 40px;">Mega Clientes</div>
+      <div class="clients-ticker-wrap">
+        <div class="clients-ticker" id="clients-ticker">
+          <div class="ticker-track">
+            <div class="client-brand br-1"></div>
+            <div class="client-brand br-2"></div>
+            <div class="client-brand br-3"></div>
+            <div class="client-brand br-4"></div>
+            <div class="client-brand br-5"></div>
+            <div class="client-brand br-6"></div>
+            <div class="client-brand br-7"></div>
+            <div class="client-brand br-8"></div>
+            <div class="client-brand br-9"></div>
+          </div>
+          <!-- Duplicado absoluto para loop infinito perfeito -->
+          <div class="ticker-track" aria-hidden="true">
+            <div class="client-brand br-1"></div>
+            <div class="client-brand br-2"></div>
+            <div class="client-brand br-3"></div>
+            <div class="client-brand br-4"></div>
+            <div class="client-brand br-5"></div>
+            <div class="client-brand br-6"></div>
+            <div class="client-brand br-7"></div>
+            <div class="client-brand br-8"></div>
+            <div class="client-brand br-9"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════ MODAL TELA INTEIRA (EXPOSIÇÃO) ═══════════════════════════ -->
+  <div class="expo-modal" id="expo-modal">
+    <div class="expo-close" id="expo-close">✕</div>
+
+    <div class="expo-container">
+
+      <!-- HERO DO MODAL: Conteúdo Invertido (Referência) -->
+      <div class="expo-hero">
+
+        <!-- Lado Esquerdo: Textos e Metadados (Agora primeiro) -->
+        <div class="expo-info-side">
+          <div class="expo-eyebrow" id="expo-role">Role</div>
+          <h1 class="expo-company" id="expo-company">Company</h1>
+          <h2 class="expo-project-title" id="expo-title-h2">Título do Projeto</h2>
+
+          <div class="expo-brief" id="expo-brief-p">
+            <strong>Brief:</strong><br>
+            Descrição detalhada do projeto...
+          </div>
+
+          <div class="expo-meta-grid">
+            <div class="meta-item">
+              <span class="meta-label">Duração</span>
+              <span class="meta-value" id="expo-time-val">4 Semanas</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Softwares</span>
+              <div class="meta-tools" id="expo-tools-list">
+                <!-- Spans gerados via JS -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lado Direito: Mockup de Celular com Perspectiva -->
+        <div class="expo-visual-side">
+          <div class="phone-mockup-wrap">
+            <div class="phone-mockup">
+              <div class="phone-screen">
+                <div class="dynamic-island"></div>
+                <img id="expo-main-image" src="" alt="Destaque do Projeto">
+              </div>
+            </div>
+            <!-- Cartões Flutuantes (Fotos Saindo pela Esquerda) -->
+            <div class="floating-social-card card-1"></div>
+            <div class="floating-social-card card-2"></div>
+            <div class="floating-social-card card-3"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- GALERIA INFERIOR: Moodboard Temático -->
+      <div class="expo-divider"></div>
+      <div class="expo-gallery-section">
+        <h3 class="gallery-title">Exploração Visual</h3>
+        <div class="expo-grid">
+          <div class="grid-item tall">
+            <div class="img-ph"></div>
+          </div>
+          <div class="grid-item">
+            <div class="img-ph"></div>
+          </div>
+          <div class="grid-item">
+            <div class="img-ph"></div>
+          </div>
+          <div class="grid-item wide">
+            <div class="img-ph"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Indicador de Scroll no Modal -->
+    <div class="modal-scroll-hint" id="modal-scroll-hint">
+      <span class="scroll-text">Role para ver o projeto</span>
+      <div class="scroll-line"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════ ÍNDICE ═══════════════════════════ -->
+  <section class="toc-section">
+    <div class="toc-bg-text" aria-hidden="true">ÍNDICE</div>
+    <h2 class="toc-title scroll-reveal" data-dir="up">O que vem a seguir</h2>
+    <div class="toc-grid">
+      <div class="toc-item scroll-reveal" data-dir="up" data-delay="0">
+        <span class="toc-num">01</span>
+        <a href="#branding" class="toc-tag">Projetos</a>
+      </div>
+      <div class="toc-item scroll-reveal" data-dir="up" data-delay="100">
+        <span class="toc-num">02</span>
+        <a href="#social" class="toc-tag">Social Media</a>
+      </div>
+      <div class="toc-item scroll-reveal" data-dir="up" data-delay="200">
+        <span class="toc-num">03</span>
+        <a href="#impressao" class="toc-tag">Impressão Digital</a>
+      </div>
+      <div class="toc-item scroll-reveal" data-dir="up" data-delay="300">
+        <span class="toc-num">04</span>
+        <a href="#audiovisual" class="toc-tag">Audiovisual</a>
+      </div>
+      <div class="toc-item scroll-reveal" data-dir="up" data-delay="400">
+        <span class="toc-num">05</span>
+        <a href="#contato" class="toc-tag">Contato</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ BRANDING ═══════════════════════════ -->
+  <section class="branding-section" id="branding">
+
+    <!-- Cabeçalho -->
+    <div class="branding-header">
+      <div class="branding-header-left scroll-reveal" data-dir="left">
+        <div class="section-eyebrow">01 — Identidade Visual</div>
+        <h2 class="section-title">Projetos de<br /><em>Faculdade</em></h2>
+        <div class="section-title-line"></div>
+      </div>
+      <div class="branding-header-right scroll-reveal" data-dir="right" data-delay="200">
+        <div class="branding-count-block">
+          <span class="branding-count-num">06</span>
+          <span class="branding-count-label">Projetos</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bento Grid de Projetos -->
+    <div class="branding-grid">
+
+      <!-- Projeto 1 – LARGO -->
+      <article class="brand-card brand-wide scroll-reveal" data-dir="left" data-delay="0">
+        <div class="brand-media">
+          <div class="brand-placeholder bp-1">
+            <div class="bp-inner-ring bp-ring-lg"></div>
+            <div class="bp-inner-ring bp-ring-sm"></div>
+            <div class="bp-center-dot"></div>
+          </div>
+          <div class="brand-overlay">
+            <div class="brand-tags">
+              <span>Identidade</span><span>Logo</span><span>Branding</span>
+            </div>
+          </div>
+        </div>
+        <div class="brand-info">
+          <span class="brand-num">01</span>
+          <div class="brand-text">
+            <h3 class="brand-title">MKV Digital</h3>
+            <p class="brand-desc">Identidade visual completa para agência digital de Dubai — sistema de marca robusto,
+              paleta de cores e diretrizes de aplicação.</p>
+          </div>
+          <div class="brand-tools"><span>Ai</span><span>Ps</span><span>Id</span></div>
+        </div>
+      </article>
+
+      <!-- Projeto 2 – ESTREITO -->
+      <article class="brand-card brand-narrow scroll-reveal" data-dir="up" data-delay="100">
+        <div class="brand-media">
+          <div class="brand-placeholder bp-2">
+            <div class="bp-inner-ring bp-ring-lg"></div>
+            <div class="bp-inner-ring bp-ring-sm"></div>
+            <div class="bp-center-dot"></div>
+          </div>
+          <div class="brand-overlay">
+            <div class="brand-tags">
+              <span>Logo</span><span>Tipografia</span>
+            </div>
+          </div>
+        </div>
+        <div class="brand-info">
+          <span class="brand-num">02</span>
+          <div class="brand-text">
+            <h3 class="brand-title">Mystics Advertising</h3>
+            <p class="brand-desc">Rebranding estratégico com identidade moderna e impactante para agência de
+              publicidade.</p>
+          </div>
+          <div class="brand-tools"><span>Ai</span><span>Ps</span></div>
+        </div>
+      </article>
+
+      <!-- Projeto 3 – ESTREITO -->
+      <article class="brand-card brand-narrow scroll-reveal" data-dir="up" data-delay="160">
+        <div class="brand-media">
+          <div class="brand-placeholder bp-3">
+            <div class="bp-inner-ring bp-ring-lg"></div>
+            <div class="bp-inner-ring bp-ring-sm"></div>
+            <div class="bp-center-dot"></div>
+          </div>
+          <div class="brand-overlay">
+            <div class="brand-tags">
+              <span>Paleta</span><span>Símbolo</span>
+            </div>
+          </div>
+        </div>
+        <div class="brand-info">
+          <span class="brand-num">03</span>
+          <div class="brand-text">
+            <h3 class="brand-title">Mátrics Ltd</h3>
+            <p class="brand-desc">Sistema de marca para empresa de tecnologia com linguagem visual técnica e inovadora.
+            </p>
+          </div>
+          <div class="brand-tools"><span>Ai</span><span>Ae</span></div>
+        </div>
+      </article>
+
+      <!-- Projeto 4 – LARGO -->
+      <article class="brand-card brand-wide scroll-reveal" data-dir="right" data-delay="100">
+        <div class="brand-media">
+          <div class="brand-placeholder bp-4">
+            <div class="bp-inner-ring bp-ring-lg"></div>
+            <div class="bp-inner-ring bp-ring-sm"></div>
+            <div class="bp-center-dot"></div>
+          </div>
+          <div class="brand-overlay">
+            <div class="brand-tags">
+              <span>Mockup</span><span>Papelaria</span><span>Identidade</span>
+            </div>
+          </div>
+        </div>
+        <div class="brand-info">
+          <span class="brand-num">04</span>
+          <div class="brand-text">
+            <h3 class="brand-title">Artwing</h3>
+            <p class="brand-desc">Identidade visual e papelaria completa para estúdio criativo, com aplicações em
+              materiais físicos e digitais.</p>
+          </div>
+          <div class="brand-tools"><span>Ai</span><span>Ps</span><span>Pr</span></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SOCIAL MEDIA (FAN DISPLAY 3D) ═══════════════════════════ -->
+  <section class="social-section" id="social">
+    <div class="social-header">
+      <div class="sh-left scroll-reveal" data-dir="left">
+        <div class="section-eyebrow">02 — Gestão e Estratégia</div>
+        <h2 class="section-title">Social Media<br /><em>& Estratégia</em></h2>
+        <div class="section-title-line"></div>
+      </div>
+      <div class="sh-right scroll-reveal" data-dir="right" data-delay="200">
+        <div class="sh-count-block">
+          <span class="sh-count-num">05</span>
+          <span class="sh-count-label">Cases</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="social-showcase">
+      <!-- Spotlight de fundo para dar tom profissional -->
+      <div class="spotlight"></div>
+
+      <div class="phone-fan">
+        <div class="phone-item reveal-phone" style="--i:1" data-index="0">
+          <div class="iphone-mockup">
+            <div class="screen" style="background-image: url('assets/social/social-1.jpg')"></div>
+            <div class="ig-footer"><span>⌂</span><span>🔍</span><span>⊞</span><span>♡</span><span>◯</span></div>
+            <div class="glare"></div>
+          </div>
+        </div>
+
+        <div class="phone-item reveal-phone" style="--i:2" data-index="1">
+          <div class="iphone-mockup">
+            <div class="screen" style="background-image: url('assets/social/social-2.jpg')"></div>
+            <div class="ig-footer"><span>⌂</span><span>🔍</span><span>⊞</span><span>♡</span><span>◯</span></div>
+            <div class="glare"></div>
+          </div>
+        </div>
+
+        <div class="phone-item reveal-phone" style="--i:0" data-index="2">
+          <div class="iphone-mockup">
+            <div class="screen" style="background-image: url('assets/social/social-3.jpg')"></div>
+            <div class="ig-footer"><span>⌂</span><span>🔍</span><span>⊞</span><span>♡</span><span>◯</span></div>
+            <div class="glare"></div>
+          </div>
+        </div>
+
+        <div class="phone-item reveal-phone" style="--i:3" data-index="3">
+          <div class="iphone-mockup">
+            <div class="screen" style="background-image: url('assets/social/social-4.jpg')"></div>
+            <div class="ig-footer"><span>⌂</span><span>🔍</span><span>⊞</span><span>♡</span><span>◯</span></div>
+            <div class="glare"></div>
+          </div>
+        </div>
+
+        <div class="phone-item reveal-phone" style="--i:4" data-index="4">
+          <div class="iphone-mockup">
+            <div class="screen" style="background-image: url('assets/social/social-5.jpg')"></div>
+            <div class="ig-footer"><span>⌂</span><span>🔍</span><span>⊞</span><span>♡</span><span>◯</span></div>
+            <div class="glare"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="placeholder-section" id="impressao">
+    <div class="placeholder-content">
+      <span class="placeholder-num">03</span>
+      <h2 class="placeholder-title">Impressão Digital</h2>
+      <p>Em construção — em breve</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ AUDIOVISUAL (CARROSSEL 3D) ═══════════════════════════ -->
+  <section class="audiovisual-section" id="audiovisual">
+    <!-- Cabeçalho -->
+    <div class="av-header">
+      <div class="av-header-left scroll-reveal" data-dir="left">
+        <div class="section-eyebrow">04 — Edição e Audiovisual</div>
+        <h2 class="section-title">Projetos<br /><em>Audiovisuais</em></h2>
+        <div class="section-title-line"></div>
+      </div>
+      <div class="av-header-right scroll-reveal" data-dir="right" data-delay="200">
+        <div class="av-count-block">
+          <span class="av-count-num">03</span>
+          <span class="av-count-label">Vídeos</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carrossel -->
+    <div class="av-carousel-wrap scroll-reveal" data-dir="up" data-delay="100">
+      <div class="av-carousel">
+
+        <!-- Vídeo 1 (Inicialmente Anterior) -->
+        <div class="av-item prev" data-index="0">
+          <div class="av-video-ph" style="background: transparent;">
+            <video src="https://www.w3schools.com/html/mov_bbb.mp4" autoplay loop muted playsinline
+              class="bg-video"></video>
+            <div class="play-btn"></div>
+          </div>
+        </div>
+
+        <!-- Vídeo 2 (Inicialmente Foco Central) -->
+        <div class="av-item active" data-index="1">
+          <div class="av-video-ph" style="background: transparent;">
+            <video src="https://www.w3schools.com/html/mov_bbb.mp4" autoplay loop muted playsinline
+              class="bg-video"></video>
+            <div class="play-btn"></div>
+          </div>
+        </div>
+
+        <!-- Vídeo 3 (Inicialmente Próximo) -->
+        <div class="av-item next" data-index="2">
+          <div class="av-video-ph" style="background: transparent;">
+            <video src="https://www.w3schools.com/html/mov_bbb.mp4" autoplay loop muted playsinline
+              class="bg-video"></video>
+            <div class="play-btn"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controles inferiores (Minimalista) -->
+      <div class="av-controls">
+        <button class="av-btn av-prev-btn">
+          <span>&larr;</span> PREV
+        </button>
+        <button class="av-btn av-next-btn">
+          NEXT <span>&rarr;</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="placeholder-section" id="contato">
+    <div class="placeholder-content">
+      <span class="placeholder-num">05</span>
+      <h2 class="placeholder-title">Contato</h2>
+      <p>Em construção — em breve</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <span>Wadson Silva Portfólio</span>
+    <span class="footer-line"></span>
+    <span>2026</span>
+  </footer>
+
+  <!-- ════ MODAL DE VÍDEO ════ -->
+  <div class="video-modal" id="videoModal">
+    <button class="close-modal">&times;</button>
+    <div class="modal-content">
+      <video id="modalVideo" controls></video>
+    </div>
+  </div>
+
+  <div class="bg-elements-layer" aria-hidden="true">
+    <div class="bg-greek bg-zeus"></div>
+    <div class="bg-greek bg-athena"></div>
+    <div class="bg-greek bg-hermes"></div>
+    <div class="bg-greek bg-poseidon"></div>
+
+    <!-- Partículas de Charm -->
+    <div class="bg-particle gp-1"></div>
+    <div class="bg-particle gp-2"></div>
+    <div class="bg-particle gp-3"></div>
+    <div class="bg-particle gp-4"></div>
+    <div class="bg-particle gp-5"></div>
+    <div class="bg-particle gp-6"></div>
+    <div class="bg-particle gp-7"></div>
+    <div class="bg-particle gp-8"></div>
+    <div class="bg-particle gp-9"></div>
+    <div class="bg-particle gp-10"></div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+
+</html>
