@@ -108,6 +108,37 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   /* ════════════════════════════════
+     2.5. HUD PARALLAX (SOBRE MIM)
+  ════════════════════════════════ */
+  const hudAboutWrap = document.getElementById('hud-about-wrap')
+  const pLayers = document.querySelectorAll('.p-layer')
+
+  if (hudAboutWrap) {
+    hudAboutWrap.addEventListener('mousemove', e => {
+      const rect = hudAboutWrap.getBoundingClientRect()
+      const x = (e.clientX - rect.left - rect.width / 2) / (rect.width / 2)
+      const y = (e.clientY - rect.top - rect.height / 2) / (rect.height / 2)
+
+      pLayers.forEach(layer => {
+        const depth = parseFloat(layer.dataset.depth || 0.1)
+        const moveX = x * depth * 40
+        const moveY = y * depth * 40
+        const rotX = y * depth * -10
+        const rotY = x * depth * 10
+        
+        layer.style.transform = `translate3d(${moveX}px, ${moveY}px, 100px) rotateX(${rotX}deg) rotateY(${rotY}deg)`
+      })
+    })
+
+    hudAboutWrap.addEventListener('mouseleave', () => {
+      pLayers.forEach(layer => {
+        layer.style.transform = ''
+      })
+    })
+  }
+
+
+  /* ════════════════════════════════
      4. ANIMAÇÃO DE FADE + PARALLAX AO ROLAR 
   ════════════════════════════════ */
   const heroBgText = document.getElementById('hero-bg-text')
@@ -291,9 +322,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const asset1 = expoModal.querySelector('.card-1');
         const asset2 = expoModal.querySelector('.card-2');
         const asset3 = expoModal.querySelector('.card-3');
-        if(asset1) asset1.style.backgroundImage = `url(${data.mainImg})`;
-        if(asset2) asset2.style.backgroundImage = `url(${data.mainImg})`;
-        if(asset3) asset3.style.backgroundImage = `url(${data.mainImg})`;
+        if (asset1) asset1.style.backgroundImage = `url(${data.mainImg})`;
+        if (asset2) asset2.style.backgroundImage = `url(${data.mainImg})`;
+        if (asset3) asset3.style.backgroundImage = `url(${data.mainImg})`;
 
         // Abre o Modal com lock de scroll no fundo
         expoModal.classList.add('open');
@@ -307,10 +338,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (expoHero && mockupWrap) {
           // Limpa transformações anteriores
           mockupWrap.style.transform = '';
-          cards.forEach(card => { 
-            if(card) {
-               card.style.transform = '';
-               card.classList.remove('is-playing'); // Reset inicial
+          cards.forEach(card => {
+            if (card) {
+              card.style.transform = '';
+              card.classList.remove('is-playing'); // Reset inicial
             }
           });
 
@@ -334,8 +365,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
           const handleMouseLeave = () => {
             mockupWrap.style.transform = '';
-            cards.forEach(card => { 
-              if(card) {
+            cards.forEach(card => {
+              if (card) {
                 card.style.marginLeft = '0';
                 card.style.marginTop = '0';
               }
@@ -361,8 +392,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Remove a classe quando o herói sai de vista (usuario desceu)
                 // Usamos um pequeno delay ou verificação para evitar flickers
                 if (entry.boundingClientRect.top < 0) { // Saiu por cima (subiu/desceu scroll)
-                   cards.forEach(card => card && card.classList.remove('is-playing'));
-                   if (modalScrollHint) modalScrollHint.classList.add('hidden');
+                  cards.forEach(card => card && card.classList.remove('is-playing'));
+                  if (modalScrollHint) modalScrollHint.classList.add('hidden');
                 }
               }
             });
@@ -381,12 +412,12 @@ document.addEventListener('DOMContentLoaded', () => {
     expoClose.addEventListener('click', () => {
       expoModal.classList.remove('open')
       toggleScrollLock(false)
-      
+
       // Desconectar o observer ao fechar
       if (expoModal._observer) {
         expoModal._observer.disconnect();
       }
-      
+
       // Limpar classes de animação de todos os cards
       const allCards = expoModal.querySelectorAll('.floating-social-card');
       allCards.forEach(c => c.classList.remove('is-playing'));
@@ -522,6 +553,61 @@ document.addEventListener('DOMContentLoaded', () => {
       { threshold: 0.3 }
     )
     jObserver.observe(journeyCard)
+  }
+
+  // ── CENA 3D DA JORNADA (PARALLAX E INCLINAÇÃO) ──
+  const journeyScene = document.getElementById('journey-3d-scene')
+  const sceneInner = journeyScene?.querySelector('.scene-inner')
+
+  if (journeyScene && sceneInner) {
+    const photo = journeyScene.querySelector('.journey-photo-3d')
+    const hand = journeyScene.querySelector('.hand-cutout')
+
+    journeyScene.addEventListener('mousemove', (e) => {
+      const rect = journeyScene.getBoundingClientRect()
+      const centerX = rect.left + rect.width / 2
+      const centerY = rect.top + rect.height / 2
+      const moveX = (e.clientX - centerX) / (rect.width / 2)
+      const moveY = (e.clientY - centerY) / (rect.height / 2)
+
+      // Rotação da cena (Reduzida para 6deg para realismo)
+      sceneInner.style.transform = `rotateY(${moveX * 6}deg) rotateX(${moveY * -6}deg)`
+
+      // RGB Split Dinâmico (Limitado a 2px para profundidade sutil)
+      if (photo) {
+        const splitX = moveX * 2.5
+        photo.style.filter = `contrast(1.15) brightness(1.05) saturate(0.92) drop-shadow(${splitX}px 0 2px rgba(255,0,0,0.15)) drop-shadow(${-splitX}px 0 2px rgba(0,255,255,0.15))`
+      }
+      if (hand) {
+        const splitX = moveX * 2
+        hand.style.filter = `contrast(1.1) brightness(1.1) saturate(0.92) drop-shadow(${splitX}px 0 1px rgba(255,0,0,0.1)) drop-shadow(${-splitX}px 0 1px rgba(0,255,255,0.1))`
+      }
+
+      // Parallax sutil entre camadas
+      const layers = journeyScene.querySelectorAll('.scene-layer')
+      layers.forEach((layer) => {
+        const depth = layer.classList.contains('layer-fg') ? 12 :
+          layer.classList.contains('layer-ui') ? 8 : 4
+        const tx = moveX * depth
+        const ty = moveY * depth
+        const currentZ = layer.classList.contains('layer-fg') ? 280 :
+          layer.classList.contains('layer-ui') ? 120 : -150
+        layer.style.transform = `translate3d(${tx}px, ${ty}px, ${currentZ}px)`
+      })
+    })
+
+    journeyScene.addEventListener('mouseleave', () => {
+      sceneInner.style.transform = 'rotateY(0deg) rotateX(0deg)'
+      if (photo) photo.style.filter = 'contrast(1.15) brightness(1.05) saturate(0.92)'
+      if (hand) hand.style.filter = 'contrast(1.1) brightness(1.1) saturate(0.92)'
+
+      const layers = journeyScene.querySelectorAll('.scene-layer')
+      layers.forEach((layer) => {
+        const currentZ = layer.classList.contains('layer-fg') ? 280 :
+          layer.classList.contains('layer-ui') ? 120 : -150
+        layer.style.transform = `translate3d(0, 0, ${currentZ}px)`
+      })
+    })
   }
 
   /* ════════════════════════════════
@@ -668,12 +754,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const dataIdx = parseInt(phone.getAttribute('data-index'))
         // Calcula a posição (0 a 4) baseada no centro selecionado
         const pos = (dataIdx - centerIdx + 2 + total) % total
-        
+
         // Mantém as classes base e re-adiciona active se necessário
         const wasActive = phone.classList.contains('active') || phone.dataset.shouldBeActive === 'true'
-        phone.className = 'phone-item reveal-phone' 
+        phone.className = 'phone-item reveal-phone'
         if (wasActive) phone.classList.add('active')
-        
+
         phone.classList.add(`pos-${pos}`)
       })
     }
@@ -710,10 +796,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Inicializa posições e adiciona cliques
     updateSocialPositions(socialCenterIndex)
-    
+
     revealPhones.forEach(phone => {
       phoneObserver.observe(phone)
-      
+
       phone.addEventListener('click', () => {
         const clickedIdx = parseInt(phone.getAttribute('data-index'))
         socialCenterIndex = clickedIdx
@@ -736,14 +822,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', () => {
       const y = window.scrollY;
-      
+
       // Multiplicadores "Cinematográficos":
       // Movimentos extremamente lentos para que os deuses acompanhem o usuário
       // por quase toda a experiência, sumindo de forma imperceptível e sequencial.
-      if (athena) athena.style.setProperty('--sy', `${y * -0.10}px`);  
-      if (zeus) zeus.style.setProperty('--sy', `${y * -0.08}px`);      
-      if (hermes) hermes.style.setProperty('--sy', `${y * -0.06}px`);  
-      if (poseidon) poseidon.style.setProperty('--sy', `${y * -0.04}px`); 
+      if (athena) athena.style.setProperty('--sy', `${y * -0.10}px`);
+      if (zeus) zeus.style.setProperty('--sy', `${y * -0.08}px`);
+      if (hermes) hermes.style.setProperty('--sy', `${y * -0.06}px`);
+      if (poseidon) poseidon.style.setProperty('--sy', `${y * -0.04}px`);
     }, { passive: true });
 
     // Paralaxe ao mover o mouse (mantido para profundidade 3D)
@@ -755,7 +841,7 @@ document.addEventListener('DOMContentLoaded', () => {
       bgGods.forEach((god, i) => {
         if (!god) return;
         // Intensidades aumentadas para maior impacto visual (Paralaxe 3D)
-        const intensity = 35 + (i * 35); 
+        const intensity = 35 + (i * 35);
         god.style.setProperty('--mx', `${dx * intensity}px`);
         god.style.setProperty('--my', `${dy * intensity}px`);
       });
